@@ -1,0 +1,29 @@
+<div class="container">
+    <br />
+    <h1>B3 Teste Desenvolvedor: Leandro Rodrigues</h1>
+    
+    <a href="#" routerLink="/tarefa/create/" class="btn btn-success">Criar Nova Tarefa</a>
+      
+    <table class="table table-striped">
+        <thead>
+              <tr>
+                <th>Id</th>
+                <th>Descrição</th>
+                <th>Data</th>
+                <th width="250px">Action</th>
+              </tr>
+        </thead>
+        <tbody>
+              <tr *ngFor="let tarefa of tarefas">
+                <td>{{ tarefa.tarefaId }}</td>
+                <td>{{ tarefa.descricao }}</td>
+                <td>{{ tarefa.data }}</td>
+                <td>
+                  <a href="#" [routerLink]="['/tarefa/', tarefa.tarefaId, 'view']" class="btn btn-info">View</a>
+                  <a href="#" [routerLink]="['/tarefa/', tarefa.tarefaId, 'edit']" class="btn btn-primary">Edit</a>
+                  <button type="button" (click)="deleteTarefa(tarefa.tarefaId)" class="btn btn-danger">Delete</button>
+                </td>
+              </tr>
+        </tbody>
+    </table>
+ </div>
