@@ -34,7 +34,6 @@ export class EditComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.route.snapshot.params['tarefaId'];
     this.tarefaService.find(this.id).subscribe((data: Tarefa)=>{
-      console.log('será' + JSON.stringify(data));
       this.tarefa = data;
     }); 
       
@@ -61,7 +60,6 @@ export class EditComponent implements OnInit {
    * @return response()
    */
   submit(){
-    console.log('será o que ?');
     console.log(this.form.value);
     this.tarefaService.update(this.id, this.form.value).subscribe((res:any) => {
          console.log('Tarefa updated successfully!');

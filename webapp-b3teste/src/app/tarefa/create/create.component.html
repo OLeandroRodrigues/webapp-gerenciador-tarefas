@@ -12,8 +12,8 @@
                 id="title" 
                 type="text" 
                 class="form-control">
-            <div *ngIf="f['title'].touched && f['title'].invalid" class="alert alert-danger">
-                <div *ngIf="f['title'].errors && f['title'].errors['required']">Title is required.</div>
+            <div *ngIf="f['descricao'].touched && f['descricao'].invalid" class="alert alert-danger">
+                <div *ngIf="f['descricao'].errors && f['descricao'].errors['required']">Descricao is required.</div>
             </div>
         </div>
         <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button>

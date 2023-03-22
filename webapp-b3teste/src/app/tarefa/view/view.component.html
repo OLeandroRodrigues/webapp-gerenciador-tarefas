@@ -5,22 +5,22 @@
    
     <div>
         <strong>Id:</strong>
-        <p>{{ tarefa.tarefaId }}</p>
+        <p *ngIf="tarefa">{{ tarefa.tarefaId  }}</p>
     </div>
 
     <div>
         <strong>Descricao:</strong>
-        <p>{{ tarefa.descricao }}</p>
+        <p *ngIf="tarefa">{{ tarefa.descricao }}</p>
     </div>
 
     <div>
         <strong>Status:</strong>
-        <p>{{ tarefa.tarefaStatusId }}</p>
+        <p *ngIf="tarefa">{{ tarefa.tarefaStatusId }}</p>
     </div>
 
     <div>
         <strong>Data:</strong>
-        <p>{{ tarefa.data }}</p>
+        <p *ngIf="tarefa">{{ tarefa.data }}</p>
     </div>
    
 </div>
